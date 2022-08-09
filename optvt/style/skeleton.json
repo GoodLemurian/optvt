@@ -1,15 +1,15 @@
 {
   "version": 8,
   "name": "gsimapvector",
-  "glyphs": "./glyphs/{fontstack}/{range}.pbf",
-  "sprite": "./style/std",
+  "glyphs": "http://localhost:8080/optvt/glyphs/{fontstack}/{range}.pbf",
+  "sprite": "http://localhost:8080/optvt/style/std",
   "sources": {
     "v": {
       "type": "vector",
       "minzoom": 0,
       "maxzoom": 16,
       "tiles": [
-        "../zxy/bv-1/{z}/{x}/{y}.pbf"
+        "http://localhost:8080/zxy/bv-1/{z}/{x}/{y}.pbf"
       ],
       "attribution": "<a href=\"\" target=\"_blank\">最適化ベクトルタイル</a>"
     }
@@ -181,7 +181,7 @@
         "text-rotation-alignment": "map",
         "text-size": 10,
         "text-font": [
-          "NotoSansCJKjp-Regular"
+          "NotoSansJP-Regular"
         ],
         "text-max-angle": 360,
         "text-field": [
@@ -224,7 +224,7 @@
         "text-rotation-alignment": "map",
         "text-size": 13,
         "text-font": [
-          "NotoSansCJKjp-Regular"
+          "NotoSansJP-Regular"
         ],
         "text-max-angle": 360,
         "text-field": [
@@ -723,7 +723,7 @@
         "icon-size": 0.5,
         "text-allow-overlap": true,
         "text-font": [
-          "NotoSansCJKjp-Regular"
+          "NotoSansJP-Regular"
         ],
         "text-size": 10,
         "text-field": [

@@ -4,8 +4,8 @@
 <meta charset='utf-8' />
 <title>地理院最適化ベクトルタイル</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://www.unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.js'></script>
-<link href='https://www.unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.css' rel='stylesheet' />
+<script src='https://www.unpkg.com/mapbox-gl@1.13.1/dist/mapbox-gl.js'></script>
+<link href='https://www.unpkg.com/mapbox-gl@1.13.1/dist/mapbox-gl.css' rel='stylesheet' />
 <style>
 body { margin:0; padding:0; }
 #map {
@@ -45,7 +45,7 @@ body { margin:0; padding:0; }
 
 
 <script>
-var map = new maplibregl.Map({
+var map = new mapboxgl.Map({
   container: 'map',
   hash: true,
   style: './style/skeleton.json', //style.jsonへのパス
@@ -57,8 +57,8 @@ var map = new maplibregl.Map({
 //  localIdeographFontFamily: ['MS Gothic', 'Hiragino Kaku Gothic Pro', 'sans-serif']
 });
 
-map.addControl(new maplibregl.NavigationControl(), 'bottom-right');
-map.addControl(new maplibregl.ScaleControl());
+map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+map.addControl(new mapboxgl.ScaleControl());
 map.showTileBoundaries = true;
 
 const layerList = document.getElementById('menu');
