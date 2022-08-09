@@ -1,15 +1,15 @@
 {
     "version": 8,
     "name": "gsimapvector",
-	  "glyphs": "http://localhost:8080/optvt/glyphs/{fontstack}/{range}.pbf",
-	  "sprite": "http://localhost:8080/optvt/style/std",
+	  "glyphs": "https://goodlemurian.github.io/optvt/glyphs/{fontstack}/{range}.pbf",
+	  "sprite": "https://goodlemurian.github.io/optvt/style/std",
     "sources": {
         "v": {
             "type": "vector",
             "minzoom": 0,
             "maxzoom": 16,
             "tiles": [
-                "http://localhost:8080/zxy/bv-1/{z}/{x}/{y}.pbf"
+                "https://goodlemurian.github.io/optvt/zxy/bv-1/{z}/{x}/{y}.pbf"
             ],
                   "attribution": "<a href=\"\" target=\"_blank\">最適化ベクトルタイル</a>"
         }
