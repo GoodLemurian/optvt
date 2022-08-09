@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<title>最適化ベクトルタイル</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://www.unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.js'></script>
+<link href='https://www.unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.css' rel='stylesheet' />
+<style>
+body { margin:0; padding:0; }
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+#title {
+	position: absolute;
+	background: #000000;
+	margin: 10px;
+	padding:0 10px 0 10px;
+	color:#ffffff;
+}
+#menu {
+	position: absolute;
+	background: #efefef;
+	padding: 10px;
+	left: 80%;
+	font-family: 'Open Sans', sans-serif;
+}
+#menu ul {
+	list-style-type: none;
+}
+</style>
+</head>
+<body>
+ 
+<div id='map'></div>
+<div id='title'><h2>最適化ベクトルタイル</h2></div>
+<div id='menu'>
+	<ul>
+		<li><input id="skeleton" type="radio" name="rtoggle" value="skeleton" checked="checked"><label for="skeleton">スタイル無</label></li>
+		<li><input id="std1" type="radio" name="rtoggle" value="std1"><label for="std1">スタイル有</label></li>
+	</ul>
+</div>
+
+
+<script>
+var map = new maplibregl.Map({
+  container: 'map',
+  hash: true,
+  style: './style/skeleton.json', //style.jsonへのパス
+  center: [139.77544, 35.69838], 
+  zoom: 15,
+  maxZoom: 17.99,
+  minZoom: 4,
+  localIdeographFontFamily: false
+//  localIdeographFontFamily: ['MS Gothic', 'Hiragino Kaku Gothic Pro', 'sans-serif']
+});
+
+map.addControl(new maplibregl.NavigationControl(), 'bottom-right');
+map.addControl(new maplibregl.ScaleControl());
+map.showTileBoundaries = true;
+
+const layerList = document.getElementById('menu');
+const inputs = layerList.getElementsByTagName('input');
+
+for (const input of inputs) {
+	input.onclick = (layer) => {
+	const layerId = layer.target.id;
+	map.setStyle('./style/' + layerId + '.json');
+	};
+}
+</script>
+ 
+</body>
+</html>
